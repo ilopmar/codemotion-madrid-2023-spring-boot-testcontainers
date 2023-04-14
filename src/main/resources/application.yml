@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/codemotion
+    username: user
+    password: pass
+
+  kafka:
+    listener:
+      missingTopicsFatal: false
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      properties.spring.json.trusted.packages: com.codemotion.demo
+      auto-offset-reset: earliest
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    bootstrap-servers: "localhost:9092"
