@@ -12,10 +12,6 @@ repositories {
   mavenCentral()
 }
 
-ext {
-  set('testcontainersVersion', "1.17.6")
-}
-
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-actuator'
   implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -30,6 +26,9 @@ dependencies {
   testImplementation 'org.testcontainers:junit-jupiter'
   testImplementation 'org.testcontainers:kafka'
   testImplementation 'org.testcontainers:postgresql'
+  testImplementation 'org.assertj:assertj-core:3.24.2'
+  testImplementation 'io.rest-assured:rest-assured:5.3.0'
+  testImplementation 'org.awaitility:awaitility:4.2.0'
 }
 
 dependencyManagement {
