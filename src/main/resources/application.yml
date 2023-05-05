@@ -19,3 +19,10 @@ spring:
       auto-offset-reset: earliest
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
 #    bootstrap-servers: "localhost:9092"
+
+---
+spring:
+  docker:
+    compose:
+      enabled: false
+      lifecycle-management: start_only
